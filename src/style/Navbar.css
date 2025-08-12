@@ -1,0 +1,242 @@
+/* Reset and Base */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #e4e7f3;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0 1rem;
+}
+
+/* Common Flex Section */
+.navbar-section {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo Section */
+.logo-container {
+  flex: 0 0 auto;
+}
+
+.logo-img {
+  width: 126px;
+  height: 90px;
+}
+
+/* Center Links */
+.center-links {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 18px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.center-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.center-links a:hover {
+  color: #117efa;
+}
+
+/* Active Link Underline */
+.center-links a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: #117efa;
+}
+
+/* Right Icons */
+.right-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+/* Heart Icon */
+.heart-link {
+  display: flex;
+  align-items: center;
+}
+
+.heart-img {
+  height: 23px;
+  margin-right: 8px;
+}
+
+/* Cart Icon */
+.cart-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cart-img {
+  height: 23px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  font-size: 0.65rem;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+/* Profile Section */
+.profile-container {
+  position: relative;
+}
+
+.profile-img {
+  height: 38px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  min-width: 160px;
+  z-index: 1000;
+}
+
+.dropdown-menu a {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  color: #201e1e;
+  text-decoration: none;
+  font-size: 0.95rem;
+  gap: 8px;
+  transition: background 0.2s;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f5f5f5;
+}
+/* Language Selector */
+.language-dropdown {
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.language-trigger {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 10px;
+  background-color: #e7e9f0;
+  border: 1px solid #e4e7f3;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.language-trigger:hover {
+  background-color: #eceef5;
+}
+
+.arrow-down {
+  font-size: 10px;
+  margin-left: 4px;
+}
+
+.language-options {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background-color:#edeff5;
+  border: 1px solid #e4e7f3;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+  min-width: 100px;
+}
+
+.language-dropdown:hover .language-options {
+  display: block;
+}
+
+.language-options div {
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.language-options div:hover {
+  background-color: #e4e7f3;
+}
+/* Search Bar */
+.search-form {
+  display: flex;
+  align-items: center;
+  margin-left: -320px;
+  margin-right: 20px;
+  background-color: rgb(225, 222, 222);
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 30px;
+}
+
+.search-input {
+  border: none;
+  padding: 0 10px;
+  font-size: 14px;
+  width: 180px;
+  outline: none;
+  height: 100%;
+}
+
+.search-button {
+  background-color: #47a6ff;
+  color: white;
+  border: none;
+  padding: 0 12px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.search-button:hover {
+  background-color: #0d6ede;
+}
